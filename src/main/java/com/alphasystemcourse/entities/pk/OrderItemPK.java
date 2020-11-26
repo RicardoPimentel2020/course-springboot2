@@ -18,7 +18,7 @@ public class OrderItemPK implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name = "order_id")
-	private Order oder;
+	private Order order;
 	
 	@ManyToOne
 	@JoinColumn(name = "product_id")
@@ -26,10 +26,10 @@ public class OrderItemPK implements Serializable{
 	
 	
 	public Order getOder() {
-		return oder;
+		return order;
 	}
 	public void setOder(Order oder) {
-		this.oder = oder;
+		this.order = oder;
 	}
 	public Product getProduct() {
 		return product;
@@ -43,7 +43,7 @@ public class OrderItemPK implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((oder == null) ? 0 : oder.hashCode());
+		result = prime * result + ((order == null) ? 0 : order.hashCode());
 		result = prime * result + ((product == null) ? 0 : product.hashCode());
 		return result;
 	}
@@ -56,10 +56,10 @@ public class OrderItemPK implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		OrderItemPK other = (OrderItemPK) obj;
-		if (oder == null) {
-			if (other.oder != null)
+		if (order == null) {
+			if (other.order != null)
 				return false;
-		} else if (!oder.equals(other.oder))
+		} else if (!order.equals(other.order))
 			return false;
 		if (product == null) {
 			if (other.product != null)
